@@ -44,6 +44,10 @@ AUDIENCE_DESC = "businesses in your region"
 # 3) The news sources. Each line is:  ("Display name", "the RSS feed URL")
 #    Replace these with RSS feeds for YOUR market. To find a feed, search
 #    "<news site name> RSS". Keep the round brackets, quotes, and commas.
+#    Any line starting with a "#", like this one, is just a comment —
+#    a note for humans. Python ignores it and does not run it.
+#    The 2 news sites below are just an example of how you can add your news sources.
+#    Please look for and include your own news sources' RSS links, based on your market of interest.
 RSS_FEEDS = [
     ("Malay Mail",   "https://www.malaymail.com/feed/rss/malaysia"),
     ("Malaysiakini", "https://www.malaysiakini.com/rss/en/news.rss"),
@@ -53,8 +57,10 @@ RSS_FEEDS = [
 # 4) Who receives the daily email. Add each address in quotes, separated by
 #    commas. Recipients can be ANY email provider — only the SENDER (set up
 #    later as a Gmail App Password) has to be Gmail.
+#    ensure that all the email addresses follow the example format below, with "#" in front of it.
 RECIPIENT_EMAILS = [
     "you@example.com",
+    # Remember to remove ^ this invalid example email from your final script as well before you save it.
     # "teammate@example.com",
     # "another.person@example.com",
 ]
