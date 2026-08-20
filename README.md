@@ -1,2 +1,2 @@
 # news_bot_template
-A free, automated daily news digest workflow that fetches the latest news headlines, summarises them and generates insights using Gemini free AI model, and emails your team the brief generated. Feel free to replicate it by forking it and editing the news sources and AI prompt to suit your market of interest.
+A free, automated daily news digest workflow that fetches the latest news headlines, summarises them with insights generated using Gemini free AI model, and emails your team the brief generated. Feel free to replicate it by forking it and editing the news sources and AI prompt to suit your market of interest. Refer to the SETUP.md file for the full beginner guide with step-by-step instructions on how to setup the entire workflow from the get go.
