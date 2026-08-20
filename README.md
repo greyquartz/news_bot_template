@@ -52,6 +52,6 @@ the Gemini API (free `flash` models), and Gmail. No subscriptions, no server.
 
 This template sends through **Gmail**. That's the simplest to start with, but
 Google may **suspend** a Gmail account that sends automated daily email to many
-recipients from a data centre. If that happens repeatedly, switch to a free
-**transactional email service** (e.g. Brevo, Mailjet, Amazon SES) — they're
+recipients from a data centre. If that happens repeatedly, consider switching to use 
+a free **transactional email service** (e.g. Brevo, Mailjet, Amazon SES) — they're
 built for automated sending and won't suspend you. See `SETUP.md` for details.
