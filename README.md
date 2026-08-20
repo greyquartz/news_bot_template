@@ -1,2 +1,57 @@
-# news_bot_template
-A free, automated daily news digest workflow that fetches the latest news headlines, summarises them with insights generated using Gemini free AI model, and emails your team the brief generated. Feel free to replicate it by forking it and editing the news sources and AI prompt to suit your market of interest. Refer to the SETUP.md file for the full beginner guide with step-by-step instructions on how to setup the entire workflow from the get go.
+# Daily News Bot — Template
+
+A small, **free** tool that emails your team a short daily news brief.
+
+Every day it automatically:
+1. **Collects** the latest headlines from news sites you choose (via their RSS feeds),
+2. **Summarises** them with a free Google Gemini AI model into a business-focused brief,
+3. **Emails** that brief to your team — with a log of exactly what the AI did attached.
+
+There is **no server and no database.** GitHub runs it on a timer, for free. You
+don't need to leave a computer on.
+
+---
+
+## 👉 New here? Start with [`SETUP.md`](SETUP.md)
+
+`SETUP.md` is a complete, click-by-click guide written for **someone who has
+never used GitHub or written code before.** Follow it top to bottom and you'll
+have your own working news bot.
+
+---
+
+## What you'll edit
+
+You only ever edit the **`>>> CONFIG <<<`** section at the top of `news_bot.py`:
+
+| Setting | What it is |
+|---|---|
+| `MARKET_NAME` | The country/market your brief is about (e.g. `"Malaysia"`). |
+| `AUDIENCE_DESC` | Who the brief is for (e.g. `"Singapore businesses"`). |
+| `RSS_FEEDS` | The news sources — each an RSS feed URL. |
+| `RECIPIENT_EMAILS` | Who receives the daily email. |
+
+Everything else works as-is.
+
+## The files in this project
+
+| File | What it is |
+|---|---|
+| `news_bot.py` | The whole program: fetch → summarise → email. |
+| `requirements.txt` | The free add-on tools the script needs (installed automatically). |
+| `.github/workflows/daily_news.yml` | The daily timer (GitHub Actions). |
+| `SETUP.md` | The full step-by-step setup guide. |
+| `README.md` | This file. |
+
+## Cost
+
+Designed to run entirely on **free tiers**: GitHub Actions (scheduling),
+the Gemini API (free `flash` models), and Gmail. No subscriptions, no server.
+
+## A note on email reliability
+
+This template sends through **Gmail**. That's the simplest to start with, but
+Google may **suspend** a Gmail account that sends automated daily email to many
+recipients from a data centre. If that happens repeatedly, switch to a free
+**transactional email service** (e.g. Brevo, Mailjet, Amazon SES) — they're
+built for automated sending and won't suspend you. See `SETUP.md` for details.
