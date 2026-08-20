@@ -45,13 +45,14 @@ Everything else works as-is.
 
 ## Cost
 
-Designed to run entirely on **free tiers**: GitHub Actions (scheduling),
-the Gemini API (free `flash` models), and Gmail. No subscriptions, no server.
+Designed to run entirely on **free tiers**: Free retrieval of news articles/headlines via RSS, 
+GitHub Actions (free scheduling), the Gemini API (free `flash` models), and Gmail. 
+No subscriptions and no server needed.
 
 ## A note on email reliability
 
-This template sends through **Gmail**. That's the simplest to start with, but
-Google may **suspend** a Gmail account that sends automated daily email to many
-recipients from a data centre. If that happens repeatedly, consider switching to use 
-a free **transactional email service** (e.g. Brevo, Mailjet, Amazon SES) — they're
-built for automated sending and won't suspend you. See `SETUP.md` for details.
+This template sends the brief/newsletter through **Gmail**. That's the simplest to start with, but
+Google may **suspend** the Gmail account that sends automated daily email to many
+recipients from a data centre due to suspicious activity. 
+Following the suspension, you will need to send in an appeal to recover your account before it can be used again. 
+If that happens repeatedly, consider switching to use a free **transactional email service** (e.g. Brevo, Mailjet, Amazon SES) — they're built for automated sending and won't suspend you. See `SETUP.md` for details.
