@@ -30,18 +30,29 @@ it on. That's it.
 ## Part 1 — Create a GitHub account and copy this project
 
 1. Go to **https://github.com** and sign up for a free account (if you don't have one).
-2. Get your own copy of this project. You have two easy options:
-   - **If someone shared this as a GitHub repository:** open it and click the
-     **"Fork"** button (top-right). That instantly makes your own private copy.
-   - **If you have these files on your computer:** go to
-     **https://github.com/new**, give the repository a name (e.g.
-     `my-news-bot`), choose **Private** for now, click **Create repository**,
-     then use **"Add file → Upload files"** to upload all the files. Important:
-     when uploading the timer file, keep its folder path exactly as
-     `.github/workflows/daily_news.yml` (GitHub creates the folders for you when
-     you type that path).
 
-You now have your own copy. Everything below happens inside it.
+2. Get your own copy of this project. **Use the green "Use this template" button
+   at the top of the template repo — do NOT use "Fork."**
+
+   > **Why this matters:** a *fork* of a public repo **cannot be made private**.
+   > You'll be adding your team's real email addresses to the code, so your copy
+   > needs to be private. "Use this template" gives you an independent copy that
+   > you *can* set to private; a fork does not.
+
+   Click **"Use this template" → "Create a new repository"**, give it a name
+   (e.g. `my-news-bot`), and create it.
+
+3. **Make your new copy private — do this before adding any real emails.**
+   In your new repo: **Settings → General**, scroll to **"Change repository
+   visibility,"** and set it to **Private**. Now nothing you add can be seen
+   publicly.
+
+   *(Alternative, if you'd rather not use the template button: create a fresh
+   Private repo at https://github.com/new and upload these files yourself. When
+   uploading the timer file, keep its path exactly as
+   `.github/workflows/daily_news.yml` — GitHub makes the folders for you.)*
+
+You now have your own private copy. Everything below happens inside it.
 
 ---
 
