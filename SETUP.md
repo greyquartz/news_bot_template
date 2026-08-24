@@ -47,11 +47,6 @@ it on. That's it.
    visibility,"** and set it to **Private**. Now nothing you add can be seen
    publicly.
 
-   *(Alternative, if you'd rather not use the template button: create a fresh
-   Private repo at https://github.com/new and upload these files yourself. When
-   uploading the timer file, keep its path exactly as
-   `.github/workflows/daily_news.yml` — GitHub makes the folders for you.)*
-
 You now have your own private copy. Everything below happens inside it.
 
 ---
