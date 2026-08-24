@@ -7,7 +7,7 @@ Take it slowly — there's nothing here you can break.
 By the end, your team will automatically receive a short, AI-written news brief
 by email every day — for free.
 
-Note: This project is an ongoing work in progress and may continue to undergo refinements and improvements. Users of the template code are welcome to further explore, adapt, and enhance the project based on their needs and ideas.
+Note: This project is an ongoing work in progress and may continue to undergo refinements and improvements. Users of the template code are welcome to further explore, adapt, and enhance the project based on their needs and ideas.eeds and ideas.
 ---
 
 ## What you'll set up (the big picture)
