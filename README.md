@@ -55,4 +55,5 @@ This template sends the brief/newsletter through **Gmail**. That's the simplest 
 Google may **suspend** the Gmail account that sends automated daily email to many
 recipients from a data centre due to suspicious activity. 
 Following the suspension, you will need to send in an appeal to recover your account before it can be used again. 
+
 [KIV] If that happens repeatedly, you may want to explore other options such as switching to use a free **transactional email service** (e.g. Brevo, Mailjet, Amazon SES) — they're built for automated sending and are less likely to suspend your account. See `SETUP.md` for details.
