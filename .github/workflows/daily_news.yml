@@ -1,0 +1,47 @@
+# This file tells GitHub Actions to run the news bot automatically every day.
+#
+# "schedule" uses cron syntax — a standard format for expressing time schedules.
+# GitHub Actions always uses UTC time. Singapore is UTC+8, so:
+#   10:00am SGT = 02:00am UTC → cron: '0 2 * * *'
+#
+# "workflow_dispatch" lets you also trigger this manually from the GitHub website,
+# which is useful for testing without waiting for the scheduled time.
+
+name: Daily Malaysia News Digest
+
+on:
+  schedule:
+    # 01:17am UTC = 9:17am Singapore Time (UTC+8). We aim a little earlier than
+    # 10am and use an off-the-hour minute (:17) because GitHub Actions runs cron
+    # jobs on a "best effort" basis — on-the-hour times are the most congested
+    # and get delayed the most. This gives the run buffer to still arrive around
+    # mid-morning even when GitHub is busy.
+    - cron: '17 1 * * *'
+  workflow_dispatch:      # allows manual run from the GitHub Actions tab
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest  # GitHub spins up a fresh Linux machine for each run
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        # Downloads your code onto the temporary machine so it can run the script
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        # Installs feedparser and google-generativeai
+
+      - name: Run news bot
+        env:
+          # These pull in the secrets you set in GitHub repository settings.
+          # The actual values are never visible in the code or logs.
+          GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
+          GMAIL_ADDRESS:       ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD:  ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python news_bot.py
