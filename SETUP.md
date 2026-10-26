@@ -167,11 +167,8 @@ on-the-hour times. It still runs each day.
 **Your Gmail keeps getting suspended.**
 Google may flag an account that sends automated daily email to many recipients
 from a data centre. This is behaviour-based, so appealing is a temporary fix.
-The durable solution is to switch from Gmail to a free **transactional email
-service** built for automated sending — e.g. **Brevo** (300 emails/day free),
-**Mailjet**, or **Amazon SES**. The code change is small (point the sending
-step at their SMTP server with their key instead of Gmail's). If you hit this,
-that's the recommended path.
+I have not managed to find a suitable alternative to this that can ensure a safe delivery
+of the emails daily. Please let me know if you have any suggestions for this. Thanks!
 
 ---
 
